@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KSB Holzminden – Förderassistent</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">KSB Holzminden</a>
+            <nav class="nav">
+                <a href="#about">Über uns</a>
+                <a href="#features">Unsere Angebote</a>
+                <a href="#contact">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Gemeinsam Sport fördern</h1>
+            <p>Der KreisSportBund Holzminden stärkt Vereine, Ehrenamt und Integration im Landkreis. Unser Förderassistent hilft Ihnen, passende Programme zu finden.</p>
+            <a href="#start" class="cta">Förderung entdecken</a>
+        </div>
+        <div class="hero-image">
+            <img src="sports-hero.png" alt="Sport Silhouetten" />
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Über uns</h2>
+            <p>Wir sind der KreisSportBund Holzminden – eine gemeinnützige Vereinigung von über 160 Sportvereinen mit rund 29 000 Mitgliedern. Wir vertreten die Interessen der Vereine, fördern Sportangebote und Jugendarbeit und beraten rund um Entwicklung, Digitalisierung und Integration.</p>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Unsere Schwerpunkte</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>Vereinsentwicklung</h3>
+                    <p>Von der Mitgliedergewinnung bis zur Digitalisierung bieten wir Workshops, Beratung und Fördermöglichkeiten.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Integration und Vielfalt</h3>
+                    <p>Wir unterstützen Projekte, die Menschen unterschiedlicher Herkunft zusammenbringen und Teilhabe ermöglichen.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Gesundheit & Jugend</h3>
+                    <p>Ob Sportjugend, Bildung oder Prävention – wir fördern Angebote, die Bewegung und Gesundheit stärken.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="start" class="start">
+        <div class="container">
+            <h2>Starten Sie Ihren Antrag</h2>
+            <p>Nutzen Sie unseren Förderassistenten, um das passende Programm für Ihr Projekt zu finden. Geben Sie ein paar Eckdaten ein und erhalten Sie sofort eine Auswahl an Fördermöglichkeiten.</p>
+            <a href="#contact" class="cta">Kontakt aufnehmen</a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <p>Haben Sie Fragen oder möchten Sie persönlich beraten werden? Unsere Geschäftsstelle hilft Ihnen gern weiter.</p>
+            <ul>
+                <li><strong>Adresse:</strong> Liebigstraße 112, 37603 Holzminden</li>
+                <li><strong>Telefon:</strong> 05531 / 3199</li>
+                <li><strong>E‑Mail:</strong> info@ksbholzminden.de</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> KreisSportBund Holzminden e.V. – Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dynamische Jahreszahl im Footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
