@@ -62,12 +62,17 @@
             <p>Nutzen Sie unseren Förderassistenten, um das passende Programm für Ihr Projekt zu finden. Geben Sie eine kurze Projektbeschreibung sowie Ihre Kontaktdaten ein. Ihre Anfrage wird per E‑Mail an unseren Ansprechpartner gesendet.</p>
 
             <!-- Formular zur Erfassung der Projektbeschreibung und Kontaktdaten -->
-            <form id="inquiryForm">
+            <form id="inquiryForm" action="https://formsubmit.co/s.sander@ksbholzminden.de" method="POST">
+                <!-- versteckte Felder für FormSubmit -->
+                <input type="hidden" name="_subject" value="Fördermittel‑Anfrage" />
+                <input type="hidden" name="_captcha" value="false" />
+
                 <label for="project">Projektbeschreibung</label>
                 <textarea id="project" name="project" rows="4" placeholder="Beschreiben Sie Ihr Projekt…" required></textarea>
 
                 <label for="contactEmail">Ihre E‑Mail</label>
-                <input type="email" id="contactEmail" name="contactEmail" placeholder="Ihre E‑Mail-Adresse" required />
+                <!-- Name "email" wird von FormSubmit für Reply‑To verwendet -->
+                <input type="email" id="contactEmail" name="email" placeholder="Ihre E‑Mail-Adresse" required />
 
                 <button type="submit" class="cta">Anfrage senden</button>
             </form>
@@ -96,21 +101,7 @@
         // Dynamische Jahreszahl im Footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Formular zur Erfassung der Anfrage
-        const inquiryForm = document.getElementById('inquiryForm');
-        if (inquiryForm) {
-            inquiryForm.addEventListener('submit', function (e) {
-                e.preventDefault();
-                const project = document.getElementById('project').value.trim();
-                const email = document.getElementById('contactEmail').value.trim();
-                // Baue E-Mail mit Betreff und Inhalt zusammen
-                const subject = encodeURIComponent('Fördermittel‑Anfrage');
-                const body = encodeURIComponent('Projektbeschreibung:\n' + project + '\n\nKontaktemail: ' + email);
-                const mailtoLink = 'mailto:s.sander@ksbholzminden.de?subject=' + subject + '&body=' + body;
-                // Öffnet das Mailprogramm
-                window.location.href = mailtoLink;
-            });
-        }
+        // Das Formular wird direkt an FormSubmit.co gesendet; keine zusätzliche JS‑Logik notwendig
     </script>
 </body>
 </html>
